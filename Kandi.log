@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.1.25)  23 FEB 2017 22:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.1.25)  7 MAR 2017 17:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -511,18 +511,18 @@ pdf>] [2] (./Kandi.toc)
 \tf@toc=\write3
 \openout3 = `Kandi.toc'.
 
- [3] [1] [2] [3] [4]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 130.
+ [3] [1] [2] [3] [4] [5]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 143.
 
 
 (/usr/share/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-) [5] (./Kandi.aux) ) 
+) [6] (./Kandi.aux) ) 
 Here is how much of TeX's memory you used:
- 2463 strings out of 493013
- 30998 string characters out of 6139317
- 95746 words of memory out of 5000000
- 5972 multiletter control sequences out of 15000+600000
+ 2464 strings out of 493013
+ 31010 string characters out of 6139317
+ 95750 words of memory out of 5000000
+ 5973 multiletter control sequences out of 15000+600000
  10542 words of font info for 29 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  40i,4n,25p,722b,178s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -532,10 +532,10 @@ n/ec/ectt1200.600pk> </home/vaintti/.texlive/texmf-var/fonts/pk/ljfour/jknappen
 ec/ecbx1728.600pk> </home/vaintti/.texlive/texmf-var/fonts/pk/ljfour/jknappen/e
 c/ecrm1200.600pk> </home/vaintti/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec
 /ecrm1440.600pk>
-Output written on Kandi.pdf (8 pages, 63483 bytes).
+Output written on Kandi.pdf (9 pages, 70850 bytes).
 PDF statistics:
- 220 PDF objects out of 1000 (max. 8388607)
- 42 compressed objects within 1 object stream
+ 241 PDF objects out of 1000 (max. 8388607)
+ 44 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
