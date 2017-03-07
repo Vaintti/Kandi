@@ -1,0 +1,142 @@
+\documentclass[a4paper,12pt,twoside]{article} % kaksipuolinen
+\usepackage[finnish]{babel}            %suomenkielinen tavutus ja sanasto
+\usepackage[T1]{fontenc}               %valitaan ääkkösfonttikoodaus
+\usepackage[utf8]{inputenc}        	% skandit utf-8 koodauksella
+\usepackage{graphicx}           %kuvat
+%\usepackage[dvips]{graphicx}           %ps-kuvat
+\renewcommand{\baselinestretch}{1}
+
+\setlength{\oddsidemargin}{1.85cm} %kaksipuoliset marginaalit
+\setlength{\evensidemargin}{0.35cm} %kaksipuoliset marginaalit
+
+\begin{document}
+
+\pagestyle{empty}  %ei sivunumeroa sivun alareunaan
+
+\begin{center}
+\includegraphics[width=4cm]{soihtu.eps} %talleta kuva linkistä omaan hakemistoosi
+\end{center}
+
+\vspace{3.0cm}
+\begin{center}\large
+Angularin ja Reactin erot front-end kehityksessä
+\end{center}
+
+\vspace{0.5cm}
+\begin{center}
+Antti Vainikka
+\end{center}
+
+\vspace{0.5cm}
+\begin{center}
+TkK-tutkielma\\
+Huhtikuu 2017
+\end{center}
+
+\vspace{5.0cm}
+\begin{center}
+TULEVAISUUDEN TEKNOLOGIOIDEN LAITOS\\
+TURUN YLIOPISTO\\
+\end{center}
+
+%säädetään 2-puolisen sivun marginaalit vaatimuksia vastaaviksi
+\addtolength{\oddsidemargin}{-1.1cm}
+\addtolength{\voffset}{-2.3cm}
+
+\begin{minipage}{15cm}
+
+\noindent
+TURUN YLIOPISTO\\
+Tulevaisuuden teknologioiden laitos\\
+\\
+VAINIKKA, ANTTI: Angularin ja Reactin erot front-end kehityksessä\\
+TkK-tutkielma, xmäärä s., x liites.\\
+Tietotekniikka\\
+Huhtikuu 2017\\
+\rule{\textwidth}{.2mm}\\
+\\
+Angular ja React ovat molemmat laajalti käytössä olevia front-end työkaluja, jotka ovat luotuja laajentamaan verkkosovellusten toiminnallisuuksia sekä helpottamaan niiden kehitystä. Nykyään harvemmin enää kirjoitetaan verkkosovelluksia tai edes yksinkertaisempia verkkosivuja ilman mitään kehikkoja tai kirjastoja, joten niistä on tullut teollisuus standardeja.
+
+\vspace{4mm}\noindent Angular ja React ovat nykyisistä front-end työkaluista kehittyneimpien joukossa. Angular on front-end kehikko, jolle voidaan ohjelmoida käyttämällä Javascript tai Typescript -ohjelmointikieliä. Typescriptillä kirjoitetut Angular sovellukset käännetään Javascriptiksi ennen suoritusta. React on Javascript kirjasto, joten sitä kirjoitetaan enimmäkseen Javascriptiä käyttäen. DOM (document object model) manipulaatio Reactilla tapahtuu käyttäen JSX Javascript laajennussyntaksia, jolla voidaan kuvailla HTML-tageja käyttäen Javascriptiä.
+
+\vspace{4mm}\noindent Asiasanat: tiivistelmäsivu, Kandidaatti -tutkielma, Javascript, React, Angular, Front-end.
+
+\end{minipage}
+\newpage
+\tableofcontents
+\newpage
+\pagestyle{plain} 
+\setcounter{page}{1}
+
+%palautetaan 2-puolisen sivun marginaalit oletusasetuksiin
+\addtolength{\oddsidemargin}{1.1cm}
+\addtolength{\voffset}{2.3cm}
+
+
+
+\section{Johdanto}
+Nykyaikaisessa verkkosovelluskehityksessä on tavallisesti käytössä yksi tai useampi erilainen kehys tai kirjasto, joka auttaa kehittäjää tekemään sovelluksesta laajemman ja ominaisuuksiltaan monipuolisemman. Kehykset ja kirjastot tekevät usein vain tietyn osan sovelluksesta.
+
+\vspace{4mm}\noindent Angular ja React ovat tunnetuimpien joukossa front-end puolen työkaluista. Ne ovat laajalti käytössä monissa verkkopalveluissa ympäri maailman.
+
+\vspace{4mm}\noindent Angularia on käytetty muun muassa Wolfram Alpha laskentasovelluksessa\cite{angularlist}, suoritinvalmistaja Intelin verkkosivuissa sekä uutisyhtiö NBC:n (National Broadcasting Company) sekä uutisyhtiö ABC Newsin (American Broadcast Company News) verkkosivuissa.\cite{angularwikipedia} Reactilla toteutettuja tunnettuja verkkosovelluksia ja sivuja on esimerkiksi median suoratoistopalvelu Neflix, joka on erikoistunut elokuviin ja televisiosarjoihin, rss-syötteiden lukupalvelu Feedly sekä vähittäismyyntiyritys Walmartin kotisivut. \cite{reactlist}
+
+\vspace{4mm}\noindent Angular on laajalti käytetyn MEAN-fullstack kehyspinon front-end kehys. MongoDB, ExpressJS, Angular, NodeJS ovat MEAN-pinon kehykset kokonaisuudessaan. Fullstack tarkoittaa kehyspinossa sitä, että se kattaa sovelluksen kaikki osa-alueet eli back-endin, front-endin sekä tietokannan.
+
+\newpage
+
+
+\section{Kehitys}
+
+Angularin ja Reactin kehittyneisyyttä ja laajaa levinneisyyttä selittää suuret yritykset niiden kehityksen takana. Angularin kehittäjänä toimii selainjätti Google ja Reactin pääkehittäjä on Facebook. Reactin kehityksessä on mukana myös Instagram sekä yhteisö.
+
+\vspace{4mm}\noindent Angularia kehittää sekä ylläpitää hakukonejätti Google. Angular on jaettu versioihin, joista tällä hetkellä vakaa käytössä oleva versio on 1.6.1, mutta versio 2 on ollut jo pitkän aikaa kehityksessä. Versio 2 tai vain Angular 2 on toteuttanut monia asioita hyvin erilailla aikaisempiin versioihin verrattuna. Käynkin asioita läpi pääasiallisesti Angular 2 kannalta, vaikkakin monet asiat pätevät vanhempiinkin versioihin. Reactia puolestaan kehittää yhteistyössä yhteisön kanssa Facebook. Reactissa ei ole suurempia muutoksia tuovia versioita vaan sitä kehitetään kasaamalla edellisen päälle uusia ominaisuuksia ja korjauksia.
+
+\vspace{4mm}\noindent
+
+\newpage
+
+
+\section{Backendin kanssa kommunikointi}
+
+Angular käyttää sovelluksen backendin kanssa kommunikointiin palveluita, jotka lähettävät kutsuja backendille ja jakavat tiedot haluttuun paikkaan.
+
+\vspace{4mm}\noindent Reactissa puolestaan ei ole mitään sisäänrakennettua standardia tapaa kommunikoida backendin kanssa sillä se on vain kirjasto, eikä täysi front-end kehys. Sensijaan Reactin kanssa usein käytetään, muita kirjastoja hoitamaan backend kommunikaatio. Usein käytettyjen kirjastojen joukkoon kuuluu muunmuassa Ajax.
+
+\newpage
+
+\section{Datan sitominen}
+
+Front-end työkalujen tärkein tehtävä on datan näyttäminen näkymissä. Data jota näytetään voi muuttua ja usein käyttäjälle halutaan näyttää muutokset niin pian kuin mahdollista. Tämä on mahdollistettu datan sitomisella molemmissa tapauksissa. Toteutus työkalujen välillä tosin eroaa huomattavasti.
+
+\vspace{4mm}\noindent Reactin toteutuksessa muuttujia voidaan lisätä JSX koodin sekaan kaarisulkeilla. Kaarisulkeiden sisällä olevat muuttujat ottavat arvonsa koodista. React komponenteilla on erilaisia tiloja, joihin kuuluu muunmuassa komponentin luonti ja tuhoutuminen. Lisäksi voidaan määritellä intervalli, jonka välein tietty funktio suoriutuu. Näkymän päivittäminen vaatii joko intervallin tai komponentin tilan muutoksen.
+
+\vspace{4mm}\noindent
+Angularin toteutus eroaa Reactin toteutuksesta monella tavalla. Angularissa voidaan sitoa data samalla lailla yksisuuntaisesti kaarisulkeilla kuten Reactissa, mutta sen lisäksi on myös mahdollista tehdä kaksisuuntainen sidonta käyttämällä kaksia sulkeita. Yksisuuntaisessa sidonnassa data päivittyy muuttujien muuttuessa. Mikäli muuttuja on sidottu kaksisuuntaisesti toimii tämä myös toisin päin, eli muuttujan sisältö muuttuu näkymää muutettaessa. Esimerkiksi kun käyttäjä syöttää tekstikenttään jotain, muuttujan arvo muuttuu tekstikentän sisällöksi. Näkymien päivitystä ei tarvitse sitomisen jälkeen tehdä itse vaan se tapahtuu automaattisesti muuttujan muuttuessa.
+
+\vspace{4mm}\noindent
+Angular on siis kehittäjän kannalta helpompi, sillä siinä ei tarvitse miettiä päivitysintervalleja tai komponentin tilaa, toisin kuin Reactissa. React sovellukset ovat yleensä kevyempiä 
+
+
+\newpage
+
+\newpage
+\setcounter{secnumdepth}{0}
+
+\begin{thebibliography}{9}
+
+\bibitem{angularlist}
+Made With Angular
+\\\texttt{https://www.madewithangular.com/}
+
+\bibitem{angularwikipedia}
+AngularJS - Wikipedia
+\\\texttt{https://en.wikipedia.org/wiki/AngularJS}
+
+\bibitem{reactlist}
+Sites Using React
+\\\texttt{https://github.com/facebook/react/wiki/sites-using-react}
+
+\end{thebibliography}
+
+\end{document}
