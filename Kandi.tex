@@ -72,9 +72,9 @@ Angular ja React ovat molemmat laajalti käytössä olevia front-end työkaluja,
 \addtolength{\oddsidemargin}{1.1cm}
 \addtolength{\voffset}{2.3cm}
 
-
-
 \section{Johdanto}
+\renewcommand{\baselinestretch}{2}
+
 Nykyaikaisessa verkkosovelluskehityksessä on tavallisesti käytössä yksi tai useampi erilainen kehys tai kirjasto, joka auttaa kehittäjää tekemään sovelluksesta laajemman ja ominaisuuksiltaan monipuolisemman. Kehykset ja kirjastot tekevät usein vain tietyn osan sovelluksesta.
 
 \vspace{4mm}\noindent Angular ja React ovat tunnetuimpien joukossa front-end puolen työkaluista. Ne ovat laajalti käytössä monissa verkkopalveluissa ympäri maailman.
@@ -90,21 +90,26 @@ Nykyaikaisessa verkkosovelluskehityksessä on tavallisesti käytössä yksi tai 
 
 Angularin ja Reactin kehittyneisyyttä ja laajaa levinneisyyttä selittää suuret yritykset niiden kehityksen takana. Angularin kehittäjänä toimii selainjätti Google ja Reactin pääkehittäjä on Facebook. Reactin kehityksessä on mukana myös Instagram sekä yhteisö.
 
-\vspace{4mm}\noindent Angularia kehittää sekä ylläpitää hakukonejätti Google. Angular on jaettu versioihin, joista tällä hetkellä vakaa käytössä oleva versio on 1.6.1, mutta versio 2 on ollut jo pitkän aikaa kehityksessä. Versio 2 tai vain Angular 2 on toteuttanut monia asioita hyvin erilailla aikaisempiin versioihin verrattuna. Käynkin asioita läpi pääasiallisesti Angular 2 kannalta, vaikkakin monet asiat pätevät vanhempiinkin versioihin. Angularista on myös suunitteilla versio
+\vspace{4mm}\noindent Angularia kehittää sekä ylläpitää hakukonejätti Google. Angular on jaettu versioihin, joista tällä hetkellä vakaa käytössä oleva versio on 1.6.1, mutta versio 2 on ollut jo pitkän aikaa kehityksessä. Versio 2 tai vain Angular 2 on toteuttanut monia asioita hyvin erilailla aikaisempiin versioihin verrattuna. Käynkin asioita läpi pääasiallisesti Angular 2 kannalta, vaikkakin monet asiat pätevät vanhempiinkin versioihin.
 
 \vspace{4mm}\noindent
-Reactia puolestaan kehittää yhteistyössä yhteisön kanssa Facebook. Reactissa ei ole suurempia muutoksia tuovia versioita vaan sitä kehitetään kasaamalla edellisen päälle uusia ominaisuuksia ja korjauksia.
+Reactia puolestaan kehittää yhteistyössä yhteisön kanssa Facebook sekä tämän tytäryhtiö Instagram. Reactissa ei ole suurempia muutoksia tuovia versioita vaan sitä kehitetään kasaamalla edellisen päälle uusia ominaisuuksia ja korjauksia.
 
 \vspace{4mm}\noindent
+Google vaihtoi Angularin kielen Javascriptistä Typescriptiin versionumeron vaihtuessa 1 alkuisista numeroista 2 alkuisiin numeroihin.
 
 \newpage
 
 
 \section{Backendin kanssa kommunikointi}
 
-Angular käyttää sovelluksen backendin kanssa kommunikointiin palveluita, jotka lähettävät kutsuja backendille ja jakavat tiedot haluttuun paikkaan. Palvelut luodaan erillisessä tiedostossa
+Angular käyttää sovelluksen backendin kanssa kommunikointiin palveluita, jotka lähettävät kutsuja backendille ja jakavat tiedot haluttuun paikkaan. Palvelut ovat erillisessä tiedostossa määriltyjä koodinpätkiä, jotka tekevät kutsuja backendille.
 
-\vspace{4mm}\noindent Reactissa puolestaan ei ole mitään sisäänrakennettua standardia tapaa kommunikoida backendin kanssa sillä se on vain kirjasto, eikä täysi front-end kehys. Sensijaan Reactissa ei ole standardia tapaa toteuttaa backend kommunikaatiota vaan se toteutetaan usein tavallisilla Javascriptin ajax kutsuilla tai käyttäen muita kehyksiä apuna.
+\vspace{4mm}\noindent
+Reactissa puolestaan ei ole mitään sisäänrakennettua standardia tapaa kommunikoida backendin kanssa sillä se on vain kirjasto, eikä täysi front-end kehys. Sensijaan Reactissa ei ole standardia tapaa toteuttaa backend kommunikaatiota vaan se toteutetaan usein tavallisilla Javascriptin ajax kutsuilla tai käyttäen muita kehyksiä apuna.
+
+\vspace{4mm}\noindent
+Angularin palvelut injektoidaan riippuvuuksina tarvittaviin elementteihin ja niistä luodaan ilmentymä kun komponentti tarvitsee niitä. 
 
 \newpage
 
@@ -125,13 +130,34 @@ Angular on siis kehittäjän kannalta helpompi, sillä siinä ei tarvitse mietti
 
 \section{Suorituskyky ja kehittämisen vaikeudet}
 
-Angular on käyttänyt versiosta 2 alkaen kielenään Typescriptiä, joka on Javascriptin syntaksin ja semantiikan perivä kieli, joka kääntyy Javascriptiksi kääntövaiheessa. Typescriptin heikkoutena voitaisikin pitää sitä, että se täytyy kääntää Javascriptiksi, ennen kuin sitä voidaan suorittaa selaimessa. Vaikka tämä tapahtuu automaattisesti on se yksi vaihe lisää.\cite{typescript}
+Angular on käyttänyt versiosta 2 alkaen kielenään Typescriptiä, joka on Javascriptin syntaksin ja semantiikan perivä kieli, joka kääntyy Javascriptiksi kääntövaiheessa. Sekä Typescript, että Reactin JSX vaativat molemmat käännöksen ennen kuin selain voi niitä suorittaa.\cite{typescript}
 
 \vspace{4mm}\noindent
 Toisaalta typescript tuo uusia työkaluja tavallisen Javascriptin päälle. Typescriptissä voi tyypitellä muuttujia eikä tarvitse siten tyytyä Javascriptin automaattisesti antamaan muuttujatyyppiin. Tyypittelyllä saadaan ehkäistyä epätoivottuja lopputuloksia.
 
 \vspace{4mm}\noindent
-Kaikki Angularin tarjoamat helppokäyttöisyyttä edistävät seikat tekevät Angularista Reactia raskaamman.
+Monet asiat, jotka Angularissa ovat parin rivin koodinpätkiä vaativat Reactissa pidemmän pätkän koodia. Esimerkiksi sidotun muutujan päivitys, jota ei Angularissa tarvitse miettiä, vaatii React-ohjelmoijalta toimenpiteitä. Monet Angularin tarjoamat helppokäyttöisyyttä edistävät seikat saattavat tehdä Angularista Reactia raskaamman.
+
+\vspace{4mm}\noindent
+Vaikka Typescript on Javascriptin "paranneltu versio" joidenkin mielestä Reactin JSX on mukavampaa kirjoittaa. Reactin lähestymistapa on siitä erikoinen, että kaikki komponenttien HTML määrittelyt tehdään JSX:llä, joka on periaatteessa Javascriptiä, joka on tehty näyttämään HTML kieleltä. Esimerkiksi komponentin luominen JSX:llä tapahtuu seuraavalla tavalla.
+
+\vspace{4mm}\noindent
+<MyButton color="blue" shadowSize={2}>
+  Click Me
+</MyButton>
+
+\vspace{4mm}\noindent
+Mutta se muuttuu käännösvaiheessa muotoon:
+
+\vspace{4mm}\noindent
+React.createElement(
+  MyButton,
+  {color: 'blue', shadowSize: 2},
+  'Click Me'
+)
+
+\vspace{4mm}\noindent
+,joka onkin jo tyypillistä Javascript koodia, jossa ollaan käytetty vain React kirjaston metodia. 
 
 \newpage
 \setcounter{secnumdepth}{0}
