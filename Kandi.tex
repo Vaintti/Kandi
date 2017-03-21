@@ -49,17 +49,17 @@ TURUN YLIOPISTO\\
 TURUN YLIOPISTO\\
 Tulevaisuuden teknologioiden laitos\\
 \\
-VAINIKKA, ANTTI: Angularin ja Reactin erot front-end kehityksessä\\
+VAINIKKA, ANTTI: Angularin ja Reactin erot verkkosovellusten kehityksessä\\
 TkK-tutkielma, xmäärä s., x liites.\\
 Tietotekniikka\\
 Huhtikuu 2017\\
 \rule{\textwidth}{.2mm}\\
 \\
-Angular ja React ovat molemmat laajalti käytössä olevia front-end työkaluja, jotka ovat luotuja laajentamaan verkkosovellusten toiminnallisuuksia sekä helpottamaan niiden kehitystä. Nykyään harvemmin enää kirjoitetaan verkkosovelluksia tai edes yksinkertaisempia verkkosivuja ilman mitään kehikkoja tai kirjastoja, joten niistä on tullut teollisuus standardeja.
+Angular ja React ovat molemmat laajalti käytössä olevia front-end-työkaluja, eli asiakaspuolen työkaluja, jotka ovat luotuja laajentamaan verkkosovellusten toiminnallisuuksia sekä helpottamaan niiden kehitystä. Nykyään harvemmin enää kirjoitetaan verkkosovelluksia tai edes yksinkertaisempia verkkosivuja ilman mitään kehikkoja tai kirjastoja, joten niistä on tullut teollisuusstandardeja.
 
-\vspace{4mm}\noindent Angular ja React ovat nykyisistä front-end työkaluista kehittyneimpien joukossa. Angular on front-end kehikko, jolle voidaan ohjelmoida käyttämällä Javascript tai Typescript -ohjelmointikieliä. Typescriptillä kirjoitetut Angular sovellukset käännetään Javascriptiksi ennen suoritusta. React on Javascript kirjasto, joten sitä kirjoitetaan enimmäkseen Javascriptiä käyttäen. DOM (document object model) manipulaatio Reactilla tapahtuu käyttäen JSX Javascript laajennussyntaksia, jolla voidaan kuvailla HTML-tageja käyttäen Javascriptiä.
+\vspace{4mm}\noindent Angular ja React ovat nykyisistä front-end-työkaluista kehittyneimpien joukossa. Angular on front-end-kehikko, jolle voidaan ohjelmoida käyttämällä Javascript- tai Typescript-ohjelmointikieliä. Typescriptillä kirjoitetut Angular-sovellukset käännetään Javascriptiksi ennen suoritusta. React on Javascript kirjasto, joten sitä kirjoitetaan enimmäkseen Javascriptiä käyttäen. DOM (document object model)-manipulaatio Reactilla tapahtuu käyttäen JSX Javascript laajennussyntaksia, jolla voidaan kirjoittaa HTML-tageja Javascriptin sekaan.
 
-\vspace{4mm}\noindent Asiasanat: tiivistelmäsivu, Kandidaatti -tutkielma, Javascript, React, Angular, Front-end.
+\vspace{4mm}\noindent Asiasanat: Javascript, React, Angular, Front-end, verkkosovellukset, sovelluskehykset
 
 \end{minipage}
 \newpage
@@ -75,11 +75,11 @@ Angular ja React ovat molemmat laajalti käytössä olevia front-end työkaluja,
 \section{Johdanto}
 \renewcommand{\baselinestretch}{2}
 
-Nykyaikaisessa verkkosovelluskehityksessä on tavallisesti käytössä yksi tai useampi erilainen kehys tai kirjasto, joka auttaa kehittäjää tekemään sovelluksesta laajemman ja ominaisuuksiltaan monipuolisemman. Kehykset ja kirjastot tekevät usein vain tietyn osan sovelluksesta.
+Nykyaikaisessa verkkosovelluskehityksessä on tavallisesti käytössä yksi tai useampia erilaisia kehyksiä tai kirjastoja, jotka auttavat kehittäjää tekemään sovelluksesta laajemman ja ominaisuuksiltaan monipuolisemman. Kehykset ja kirjastot tekevät usein vain tietyn osan sovelluksesta.
 
-\vspace{4mm}\noindent Angular ja React ovat tunnetuimpien joukossa front-end puolen työkaluista. Ne ovat laajalti käytössä monissa verkkopalveluissa ympäri maailman.
+\vspace{4mm}\noindent Angular ja React ovat tunnetuimpien joukossa front-end työkaluista. Ne ovat laajalti käytössä monissa verkkopalveluissa ympäri maailman. Front-end-työkaluilla tarkoitetaan kehyksiä tai kirjastoja, joilla luodaan näkymiä ja toiminnallisuuksia, jotka näkyvät käyttäjälle. Toinen verkkosovellusten puoli on back-end. Back-end-työkalut ovat palvelimen puolella käytettäviä työkaluja, kuten palvelinsovelluksia.
 
-\vspace{4mm}\noindent Angularia on käytetty muun muassa Wolfram Alpha laskentasovelluksessa\cite{angularlist}, suoritinvalmistaja Intelin verkkosivuissa sekä uutisyhtiö NBC:n (National Broadcasting Company) sekä uutisyhtiö ABC Newsin (American Broadcast Company News) verkkosivuissa.\cite{angularwikipedia} Reactilla toteutettuja tunnettuja verkkosovelluksia ja sivuja on esimerkiksi median suoratoistopalvelu Neflix, joka on erikoistunut elokuviin ja televisiosarjoihin, rss-syötteiden lukupalvelu Feedly sekä vähittäismyyntiyritys Walmartin kotisivut. \cite{reactlist}
+\vspace{4mm}\noindent Angularia on käytetty muun muassa Wolfram Alpha laskentasovelluksessa\cite{angularlist}, suoritinvalmistaja Intelin verkkosivuissa sekä uutisyhtiö NBC:n (National Broadcasting Company) sekä uutisyhtiö ABC Newsin (American Broadcast Company News) verkkosivuissa.\cite{angularwikipedia} Reactilla toteutettuja tunnettuja verkkosovelluksia ja sivuja ovat esimerkiksi median suoratoistopalvelu Neflix, joka on erikoistunut elokuviin ja televisiosarjoihin, rss-syötteiden lukupalvelu Feedly sekä vähittäismyyntiyritys Walmartin kotisivut. \cite{reactlist}
 
 \vspace{4mm}\noindent Angular on laajalti käytetyn MEAN-fullstack kehyspinon front-end kehys. MongoDB, ExpressJS, Angular, NodeJS ovat MEAN-pinon kehykset kokonaisuudessaan. Fullstack tarkoittaa kehyspinossa sitä, että se kattaa sovelluksen kaikki osa-alueet eli back-endin, front-endin sekä tietokannan.
 
@@ -88,42 +88,42 @@ Nykyaikaisessa verkkosovelluskehityksessä on tavallisesti käytössä yksi tai 
 
 \section{Kehitys}
 
-Angularin ja Reactin kehittyneisyyttä ja laajaa levinneisyyttä selittää suuret yritykset niiden kehityksen takana. Angularin kehittäjänä toimii selainjätti Google ja Reactin pääkehittäjä on Facebook. Reactin kehityksessä on mukana myös Instagram sekä yhteisö.
+Angularin ja Reactin kehittyneisyyttä ja laajaa levinneisyyttä selittää suuret yritykset niiden kehityksen takana. Angularia kehittää ja ylläpitää selainjätti Google ja Reactin pääkehittäjä on Facebook. Reactin kehityksessä on mukana myös Instagram sekä käyttäjien yhteisö.
 
-\vspace{4mm}\noindent Angularia kehittää sekä ylläpitää hakukonejätti Google. Angular on jaettu versioihin, joista tällä hetkellä vakaa käytössä oleva versio on 1.6.1, mutta versio 2 on ollut jo pitkän aikaa kehityksessä. Versio 2 tai vain Angular 2 on toteuttanut monia asioita hyvin erilailla aikaisempiin versioihin verrattuna. Käynkin asioita läpi pääasiallisesti Angular 2 kannalta, vaikkakin monet asiat pätevät vanhempiinkin versioihin.
+\vspace{4mm}\noindent Angular on jaettu versioihin, joista tällä hetkellä vakaa käytössä oleva versio on 1.6.1, mutta versio 2 on ollut jo pitkän aikaa kehityksessä. Versio 2 tai vain Angular 2 on toteuttanut monia asioita hyvin erilailla aikaisempiin versioihin verrattuna. Käynkin asioita läpi pääasiallisesti Angular 2:n kannalta, vaikkakin monet asiat pätevät vanhempiinkin versioihin.
 
 \vspace{4mm}\noindent
 Reactia puolestaan kehittää yhteistyössä yhteisön kanssa Facebook sekä tämän tytäryhtiö Instagram. Reactissa ei ole suurempia muutoksia tuovia versioita vaan sitä kehitetään kasaamalla edellisen päälle uusia ominaisuuksia ja korjauksia.
 
 \vspace{4mm}\noindent
-Google vaihtoi Angularin kielen Javascriptistä Typescriptiin versionumeron vaihtuessa 1 alkuisista numeroista 2 alkuisiin numeroihin.
+Google vaihtoi Angularin kielen Javascriptistä Typescriptiin versionumeron vaihtuessa 1-alkuisista numeroista 2-alkuisiin numeroihin.
 
 \newpage
 
 
 \section{Backendin kanssa kommunikointi}
 
-Angular käyttää sovelluksen backendin kanssa kommunikointiin palveluita, jotka lähettävät kutsuja backendille ja jakavat tiedot haluttuun paikkaan. Palvelut ovat erillisessä tiedostossa määriltyjä koodinpätkiä, jotka tekevät kutsuja backendille.
+Angular käyttää sovelluksen backendin kanssa kommunikointiin palveluita, jotka lähettävät kutsuja backendille ja saavat vastauksena halutun datan. Palvelut ovat erillisessä tiedostossa määriltyjä koodinpätkiä, jotka tekevät kutsuja backendille.
 
 \vspace{4mm}\noindent
-Reactissa puolestaan ei ole mitään sisäänrakennettua standardia tapaa kommunikoida backendin kanssa sillä se on vain kirjasto, eikä täysi front-end kehys. Sensijaan Reactissa ei ole standardia tapaa toteuttaa backend kommunikaatiota vaan se toteutetaan usein tavallisilla Javascriptin ajax kutsuilla tai käyttäen muita kehyksiä apuna.
+Reactissa puolestaan ei ole mitään sisäänrakennettua standardia tapaa kommunikoida backendin kanssa sillä se on vain kirjasto, eikä täysi front-end-kehys. Sensijaan back-end-kommunikaatio toteutetaan usein tavallisilla Javascriptin ajax-kutsuilla tai käyttäen muita kehyksiä apuna.
 
 \vspace{4mm}\noindent
 Angularin palvelut injektoidaan riippuvuuksina tarvittaviin elementteihin ja niistä luodaan ilmentymä kun komponentti tarvitsee niitä. 
 
 \newpage
 
-\section{Datan sitominen ja DOM manipulaatio}
+\section{Datan sitominen ja DOM-manipulaatio}
 
 Front-end työkalujen tärkein tehtävä on datan näyttäminen näkymissä. Data jota näytetään voi muuttua ja usein käyttäjälle halutaan näyttää muutokset niin pian kuin mahdollista. Tämä on mahdollistettu datan sitomisella molemmissa tapauksissa. Toteutus työkalujen välillä tosin eroaa huomattavasti.
 
-\vspace{4mm}\noindent Reactin toteutuksessa muuttujia voidaan lisätä JSX koodin sekaan kaarisulkeilla. Kaarisulkeiden sisällä olevat muuttujat ottavat arvonsa koodista. React komponenteilla on erilaisia tiloja, joihin kuuluu muunmuassa komponentin luonti ja tuhoutuminen. Lisäksi voidaan määritellä intervalli, jonka välein tietty funktio suoriutuu. Näkymän päivittäminen vaatii joko intervallin tai komponentin tilan muutoksen.
+\vspace{4mm}\noindent Reactin toteutuksessa muuttujia voidaan lisätä JSX-koodin sekaan kaarisulkeilla. Kaarisulkeiden sisällä olevat muuttujat ottavat arvonsa koodista. React-komponenteilla on erilaisia tiloja, joihin kuuluu muunmuassa komponentin luonti ja tuhoutuminen. Lisäksi voidaan määritellä intervalli, jonka välein tietty funktio suoritetaan. Näkymän päivittäminen vaatii joko intervallin tai komponentin tilan muutoksen.
 
 \vspace{4mm}\noindent
 Angularin toteutus eroaa Reactin toteutuksesta monella tavalla. Angularissa voidaan sitoa data samalla lailla yksisuuntaisesti kaarisulkeilla kuten Reactissa, mutta sen lisäksi on myös mahdollista tehdä kaksisuuntainen sidonta käyttämällä kaksia sulkeita. Yksisuuntaisessa sidonnassa data päivittyy muuttujien muuttuessa. Mikäli muuttuja on sidottu kaksisuuntaisesti toimii tämä myös toisin päin, eli muuttujan sisältö muuttuu näkymää muutettaessa. Esimerkiksi kun käyttäjä syöttää tekstikenttään jotain, muuttujan arvo muuttuu tekstikentän sisällöksi. Näkymien päivitystä ei tarvitse sitomisen jälkeen tehdä itse vaan se tapahtuu automaattisesti muuttujan muuttuessa.
 
 \vspace{4mm}\noindent
-Angular on siis kehittäjän kannalta helpompi, sillä siinä ei tarvitse miettiä päivitysintervalleja tai komponentin tilaa, toisin kuin Reactissa. React sovellukset ovat yleensä kevyempiä 
+Angular on siis kehittäjän kannalta helpompi, sillä siinä ei tarvitse miettiä päivitysintervalleja tai komponentin tilaa, toisin kuin Reactissa. React-sovellukset ovat yleensä kevyempiä 
 
 
 \newpage
@@ -136,10 +136,10 @@ Angular on käyttänyt versiosta 2 alkaen kielenään Typescriptiä, joka on Jav
 Toisaalta typescript tuo uusia työkaluja tavallisen Javascriptin päälle. Typescriptissä voi tyypitellä muuttujia eikä tarvitse siten tyytyä Javascriptin automaattisesti antamaan muuttujatyyppiin. Tyypittelyllä saadaan ehkäistyä epätoivottuja lopputuloksia.
 
 \vspace{4mm}\noindent
-Monet asiat, jotka Angularissa ovat parin rivin koodinpätkiä vaativat Reactissa pidemmän pätkän koodia. Esimerkiksi sidotun muutujan päivitys, jota ei Angularissa tarvitse miettiä, vaatii React-ohjelmoijalta toimenpiteitä. Monet Angularin tarjoamat helppokäyttöisyyttä edistävät seikat saattavat tehdä Angularista Reactia raskaamman.
+Monet asiat, jotka Angularissa ovat parin rivin koodinpätkiä vaativat Reactissa pidemmän pätkän koodia. Esimerkiksi sidotun muuttujan päivitys, jota ei Angularissa tarvitse miettiä, vaatii React-ohjelmoijalta toimenpiteitä. Monet Angularin tarjoamat helppokäyttöisyyttä edistävät seikat saattavat tehdä Angularista Reactia raskaamman.
 
 \vspace{4mm}\noindent
-Vaikka Typescript on Javascriptin "paranneltu versio" joidenkin mielestä Reactin JSX on mukavampaa kirjoittaa. Reactin lähestymistapa on siitä erikoinen, että kaikki komponenttien HTML määrittelyt tehdään JSX:llä, joka on periaatteessa Javascriptiä, joka on tehty näyttämään HTML kieleltä. Esimerkiksi komponentin luominen JSX:llä tapahtuu seuraavalla tavalla.
+Vaikka Typescript on Javascriptin "paranneltu versio", joidenkin mielestä Reactin JSX on mukavampaa kirjoittaa. Reactin lähestymistapa on siitä erikoinen, että kaikki komponenttien HTML-määrittelyt tehdään JSX:llä, joka näyttää HTML:tä, mutta kääntyy Javascriptiksi kun ohjelma suoritetaan. Esimerkiksi komponentin luominen JSX:llä tapahtuu seuraavalla tavalla.
 
 \vspace{4mm}\noindent
 <MyButton color="blue" shadowSize={2}>
@@ -157,7 +157,7 @@ React.createElement(
 )
 
 \vspace{4mm}\noindent
-,joka onkin jo tyypillistä Javascript koodia, jossa ollaan käytetty vain React kirjaston metodia. 
+Tämä onkin jo tyypillistä Javascript-koodia, jossa ollaan käytetty vain React-kirjaston metodia createElement.
 
 \newpage
 \setcounter{secnumdepth}{0}
