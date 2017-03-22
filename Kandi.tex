@@ -83,11 +83,7 @@ Nykyaikaisessa verkkosovelluskehityksessä on tavallisesti käytössä yksi tai 
 
 \vspace{4mm}\noindent Angular on laajalti käytetyn MEAN-fullstack kehyspinon front-end kehys. MongoDB, ExpressJS, Angular, NodeJS ovat MEAN-pinon kehykset kokonaisuudessaan. Fullstack tarkoittaa kehyspinossa sitä, että se kattaa sovelluksen kaikki osa-alueet eli back-endin, front-endin sekä tietokannan.
 
-\newpage
-
-
-\section{Kehitys}
-
+\vspace{4mm}\noindent
 Angularin ja Reactin kehittyneisyyttä ja laajaa levinneisyyttä selittää suuret yritykset niiden kehityksen takana. Angularia kehittää ja ylläpitää selainjätti Google ja Reactin pääkehittäjä on Facebook. Reactin kehityksessä on mukana myös Instagram sekä käyttäjien yhteisö.
 
 \vspace{4mm}\noindent Angular on jaettu versioihin, joista tällä hetkellä vakaa käytössä oleva versio on 1.6.1, mutta versio 2 on ollut jo pitkän aikaa kehityksessä. Versio 2 tai vain Angular 2 on toteuttanut monia asioita hyvin erilailla aikaisempiin versioihin verrattuna. Käynkin asioita läpi pääasiallisesti Angular 2:n kannalta, vaikkakin monet asiat pätevät vanhempiinkin versioihin.
@@ -100,6 +96,13 @@ Google vaihtoi Angularin kielen Javascriptistä Typescriptiin versionumeron vaih
 
 \newpage
 
+\section{Ohjelmointikäytännöt}
+Angularin toteutus on lähellä perinteistä MVC(Model View Control suomeksi malli, näkymä ja ohjaus)-rakennetta, jossa ohjelma on jaettu kolmeen osaan. Malli-osa määrittää dataan liittyvät asiat, näkymäosio hoitaa esitystavan ja ohjaus päivittää näkymiä, ottaa vastaan ja validoi syötteitä sekä hakee malli-osalta tietoja. Angularin malli sisältää tavallisia Javascript olioita, näkymä HTML-mallin ja ohjaus muuttaa ylläpitää näkymiä. React ei sovellu MVC-rakenteeseen, mutta jos sitä haluaisi ajatella kyseisen rakenteen kannalta, se toteuttaisi näkymäosion siitä.
+
+\vspace{4mm}\noindent
+Reactia käyttäessään kehittäjä voi itse päättää haluaako hän toteuttaa funktionaalista vai luokkapohjaista ohjelmointia.
+
+\newpage
 
 \section{Backendin kanssa kommunikointi}
 
@@ -109,7 +112,7 @@ Angular käyttää sovelluksen backendin kanssa kommunikointiin palveluita, jotk
 Reactissa puolestaan ei ole mitään sisäänrakennettua standardia tapaa kommunikoida backendin kanssa sillä se on vain kirjasto, eikä täysi front-end-kehys. Sensijaan back-end-kommunikaatio toteutetaan usein tavallisilla Javascriptin ajax-kutsuilla tai käyttäen muita kehyksiä apuna.
 
 \vspace{4mm}\noindent
-Angularin palvelut injektoidaan riippuvuuksina tarvittaviin elementteihin ja niistä luodaan ilmentymä kun komponentti tarvitsee niitä. 
+Angularin palvelut määritellään tarvittavissa elementeissä riippuvuuksina ja niistä luodaan ilmentymä kun komponentti tarvitsee niitä.
 
 \newpage
 
@@ -179,6 +182,12 @@ Sites Using React
 \bibitem{typescript}
 Typescript - JavaScript that scales
 \\\texttt{https://www.typescriptlang.org/}
+
+\bibitem{jgrcs}
+Journal of Global Research in Computer Science
+\textit{AngularJS: A Modern MVC Framework in JavaScript}
+Nilesh Jain, Priyanka Mangal, Deepak Mehta
+Mandsaur Institue of Technology
 
 \end{thebibliography}
 
