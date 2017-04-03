@@ -3,6 +3,7 @@
 \usepackage[T1]{fontenc}               %valitaan ääkkösfonttikoodaus
 \usepackage[utf8]{inputenc}        	% skandit utf-8 koodauksella
 \usepackage{graphicx}           %kuvat
+\usepackage{setspace}
 %\usepackage[dvips]{graphicx}           %ps-kuvat
 \renewcommand{\baselinestretch}{1}
 
@@ -72,6 +73,8 @@ Angular ja React ovat molemmat laajalti käytössä olevia front-end-työkaluja,
 \addtolength{\oddsidemargin}{1.1cm}
 \addtolength{\voffset}{2.3cm}
 
+{\setstretch{1.5}
+
 \section{Johdanto}
 \renewcommand{\baselinestretch}{2}
 
@@ -97,10 +100,17 @@ Google vaihtoi Angularin kielen Javascriptistä Typescriptiin versionumeron vaih
 \newpage
 
 \section{Ohjelmointikäytännöt}
-Angularin toteutus on lähellä perinteistä MVC(Model View Control suomeksi malli, näkymä ja ohjaus)-rakennetta, jossa ohjelma on jaettu kolmeen osaan. Malli-osa määrittää dataan liittyvät asiat, näkymäosio hoitaa esitystavan ja ohjaus päivittää näkymiä, ottaa vastaan ja validoi syötteitä sekä hakee malli-osalta tietoja. Angularin malli sisältää tavallisia Javascript olioita, näkymä HTML-mallin ja ohjaus muuttaa ylläpitää näkymiä. React ei sovellu MVC-rakenteeseen, mutta jos sitä haluaisi ajatella kyseisen rakenteen kannalta, se toteuttaisi näkymäosion siitä.
+Angularin toteutus oli ennen versiota 2 lähellä perinteistä MVC(Model View Controller suomeksi malli, näkymä ja ohjaus)-rakennetta, jossa ohjelma on jaettu kolmeen osaan. Malli-osa määrittää dataan liittyvät asiat, näkymäosio hoitaa esitystavan ja ohjaus päivittää näkymiä, ottaa vastaan ja validoi syötteitä sekä hakee malli-osalta tietoja. Angularin malli sisältää tavallisia Javascript olioita, näkymä HTML-mallin ja ohjauksen hoitaa käytännössä näkyvyysalueobjektit (englanniksi scope). Näkyvyysalueobjektit ovat ohjauksen ja näkymän välisiä rajapintaobjekteja. Näkyvyysalueobjektit poistettiin Angular 2 päivityksessä.\cite{jgrcs}
+
+\vspace{8mm}\noindent\includegraphics[width=\textwidth]{MVC.png}
+
+\vspace{8mm}\noindent
+React ei sovellu MVC-rakenteeseen, mutta jos sitä haluaisi ajatella kyseisen rakenteen kannalta, se toteuttaisi näkymäosion siitä. Reactissa näkymän osat jaetaan komponentteihin ja ne täydennetään esimerkiksi JSON tiedostoista tai tietokannoista saadulla datalla. Näkymän muokkaus tapahtuu komponentin metodeissa. Usein käyttäen reactiin valmiiksi luotuja elinkaarimetodeja kuten componentDidMount(), joka suoriutuu kun objekti on kiinitetty DOM:iin (dokumenttioliomalli). \cite{react}
 
 \vspace{4mm}\noindent
-Reactia käyttäessään kehittäjä voi itse päättää haluaako hän toteuttaa funktionaalista vai luokkapohjaista ohjelmointia.
+Angular ja React -sovellukset toteuttavat tavallisesti olio-ohjelmoinnin paradigmaa. Olio-ohjelmoinnissa ohjelmakoodi on jaettu olioihin ja oliot toteuttavat oman osansa ohjelman toiminnallisuudesta. \cite{oop} Koodi on siis modulaarista ja usein sen abstraktiotaso pyritään pitämään korkealla, eli toteutetaan siten, että osia voidaan uudelleenkäyttää muualla.
+
+
 
 \newpage
 
@@ -136,7 +146,7 @@ Angular on siis kehittäjän kannalta helpompi, sillä siinä ei tarvitse mietti
 Angular on käyttänyt versiosta 2 alkaen kielenään Typescriptiä, joka on Javascriptin syntaksin ja semantiikan perivä kieli, joka kääntyy Javascriptiksi kääntövaiheessa. Sekä Typescript, että Reactin JSX vaativat molemmat käännöksen ennen kuin selain voi niitä suorittaa.\cite{typescript}
 
 \vspace{4mm}\noindent
-Toisaalta typescript tuo uusia työkaluja tavallisen Javascriptin päälle. Typescriptissä voi tyypitellä muuttujia eikä tarvitse siten tyytyä Javascriptin automaattisesti antamaan muuttujatyyppiin. Tyypittelyllä saadaan ehkäistyä epätoivottuja lopputuloksia.
+Toisaalta Typescript tuo uusia työkaluja tavallisen Javascriptin päälle. Typescriptissä voi tyypitellä muuttujia eikä tarvitse siten tyytyä Javascriptin automaattisesti antamaan muuttujatyyppiin. Tyypittelyllä saadaan ehkäistyä epätoivottuja lopputuloksia.
 
 \vspace{4mm}\noindent
 Monet asiat, jotka Angularissa ovat parin rivin koodinpätkiä vaativat Reactissa pidemmän pätkän koodia. Esimerkiksi sidotun muuttujan päivitys, jota ei Angularissa tarvitse miettiä, vaatii React-ohjelmoijalta toimenpiteitä. Monet Angularin tarjoamat helppokäyttöisyyttä edistävät seikat saattavat tehdä Angularista Reactia raskaamman.
@@ -145,27 +155,36 @@ Monet asiat, jotka Angularissa ovat parin rivin koodinpätkiä vaativat Reactiss
 Vaikka Typescript on Javascriptin "paranneltu versio", joidenkin mielestä Reactin JSX on mukavampaa kirjoittaa. Reactin lähestymistapa on siitä erikoinen, että kaikki komponenttien HTML-määrittelyt tehdään JSX:llä, joka näyttää HTML:tä, mutta kääntyy Javascriptiksi kun ohjelma suoritetaan. Esimerkiksi komponentin luominen JSX:llä tapahtuu seuraavalla tavalla.
 
 \vspace{4mm}\noindent
+\begin{verbatim}
 <MyButton color="blue" shadowSize={2}>
   Click Me
 </MyButton>
+\end{verbatim}
 
 \vspace{4mm}\noindent
 Mutta se muuttuu käännösvaiheessa muotoon:
 
 \vspace{4mm}\noindent
+\begin{verbatim}
 React.createElement(
   MyButton,
   {color: 'blue', shadowSize: 2},
   'Click Me'
 )
+\end{verbatim}
 
 \vspace{4mm}\noindent
 Tämä onkin jo tyypillistä Javascript-koodia, jossa ollaan käytetty vain React-kirjaston metodia createElement.
 
+}
 \newpage
 \setcounter{secnumdepth}{0}
 
 \begin{thebibliography}{9}
+
+\bibitem{react}
+A JavaScript library for building user interfaces - React
+\\\texttt{https://facebook.github.io/react/}
 
 \bibitem{angularlist}
 Made With Angular
@@ -186,8 +205,12 @@ Typescript - JavaScript that scales
 \bibitem{jgrcs}
 Journal of Global Research in Computer Science
 \textit{AngularJS: A Modern MVC Framework in JavaScript}
-Nilesh Jain, Priyanka Mangal, Deepak Mehta
+Nilesh Jain, Priyanka Mangal, Deepak Mehta,
 Mandsaur Institue of Technology
+
+\bibitem{oop}
+\textit{Object Oriented Programming}
+Bhanu Prasad Pokkunuri, ES Group, Central Electronics Engineering Research Institute
 
 \end{thebibliography}
 
